@@ -1,0 +1,268 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 85,6%;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation a {
+
+  color: white;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.navigation .btnlogin-popup {
+width: 130px;
+height: 50px;
+background: transparent;
+border: 2px solid #fff;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.1em;
+color: #fff;
+font-weight: 500;
+}
+
+.navigation .btnlogin-popup:hover {
+  background:#fff;
+  color: #162938;
+}
+
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+  display: none; /* Hide it initially */
+  z-index: 998; /* Make sure it's below the login button */
+}
+
+.login-popup.show {
+  display: block; /* Show the pop-up when the button is clicked */
+}
+
+.hero {
+  position: relative;
+  padding: 100px 0;
+  display: flex; /* Add this to center the content vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center; /* Add this to center the text horizontally */
+}
+
+.hero-content h1 {
+  color: #000000;
+  position: relative;
+  top: 23px;
+}
+
+.hero-content p {
+  color: #000000;
+  bottom: 10px;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  background-position:center;
+  z-index: -1; 
+}
+
+.hero {
+  max-height: calc(100vh - 100px - 50px); 
+  overflow: hidden;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-title {
+  margin-bottom: 20px; /* add some space between the title and cards */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 20px; /* add some space between cards */
+}
+
+.services .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px; /* Atur tinggi gambar sesuai kebutuhan */
+  object-fit: cover; /* Membuat gambar menutupi seluruh area */
+  border-radius: 10px; /* Menambahkan sudut bulat pada gambar */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ccc;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ccc;
+}
+
+.testimonials {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.testimonial {
+  margin-bottom: 20px;
+}
+.testimonial img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.testimonial p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  margin: 0;
+}
+
+.call-to-action {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 50%;
+  background-color: #25D366; /* WhatsApp green color */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.whatsapp-float-btn:hover {
+  background-color: #1E8233; /* WhatsApp green hover color */
+}
+
+.whatsapp-float-btn button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer li {
+  margin-right: 20px;
+}
+
+.fa {
+  font-size: 24px;
+  color: #fff;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}

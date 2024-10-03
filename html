@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+          <a href="#">Beranda</a>
+          <a href="#">Tentang Kami</a>
+          <a href="#">Forum Diskusi</a>
+          <button class="btnlogin-popup">Login</button>
+        </nav>
+    </header>
+    
+    <div class="login-container">
+      <div class="close-btn"><i class="fas fa-times"></i></div>
+      <h2>Login</h2>
+      <div>
+          <input type="email" placeholder="Email">
+          <i class="fas fa-envelope icon"></i>
+      </div>
+      <div>
+          <input type="password" placeholder="Password">
+          <i class="fas fa-lock icon lock"></i>
+      </div>
+      <div style="text-align: left;">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember me</label>
+          <a href="#" style="float: right;">Forgot Password?</a>
+      </div>
+      <button>Login</button>
+      <p style="margin-top: 20px;">Don't have an account? <a href="#">Register</a></p>
+  </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Home Service Solusi untuk Rumah Anda</h1>
+                <p>Kami menyediakan layanan terbaik untuk rumah Anda</p>
+            </div>
+            <div class="hero-background"></div>
+          </section>
+          <section class="services">
+            <h2 class="service-title">Layanan Kami</h2>
+            <div class="card-container">
+              <div class="card">
+                <img src="service-1.jpg" alt="Service 1">
+                <h3>Serba Care</h3>
+                <p>Layanan Kebutuhan Rumah dan Diri Anda</p>
+                <div class="dropdown">
+                  <button class="dropbtn">Lihat Detail</button>
+                  <div class="dropdown-content">
+                    <a href="#">Paket Bersih Rumah</a>
+                    <a href="#">Paket Grooming</a>
+                    <a href="#">Paket Laundry</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img src="service-2.jpg" alt="Service 2">
+                <h3>Serba Pet</h3>
+                <p>Layanan perawatan hewan yang profesional</p>
+                <div class="dropdown">
+                  <button class="dropbtn">Lihat Detail</button>
+                  <div class="dropdown-content">
+                    <a href="#">Grooming hewan</a>
+                    <a href="#">Antar Jemput Penitipan Hewan</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img src="service-3.jpg" alt="Service 3">
+                <h3>Serba Healt</h3>
+                <p>Layanan kesehatan yang terbaik untuk Anda</p>
+                <div class="dropdown">
+                  <button class="dropbtn">Lihat Detail</button>
+                  <div class="dropdown-content">
+                    <a href="#">Pemeriksaan Kesehatan</a>
+                    <a href="#">Konsultasi Online </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="testimonials">
+            <h2>Apa Kata Mereka</h2>
+            <div class="testimonial">
+              <img alt="Testimonial 1" height="50" src="tama.png" width="50"/>
+              <p>"Home Service adalah solusi terbaik untuk rumah saya. Mereka sangat profesional dan ramah." - Tama Ngab</p>
+          </div>
+          <div class="testimonial">
+              <img alt="Testimonial 2" height="50" src="fafa.png" width="50"/>
+              <p>"Saya sangat puas dengan layanan Home Service. Mereka sangat cepat dan efisien." - Fafa Sigma</p>
+          </div>
+        </section>
+        <section class="call-to-action">
+            <h2>Daftar Sekarang dan Dapatkan Layanan Terbaik</h2>
+            <button>Daftar Sekarang</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Serba Bisa.Project Pemrograman Website.</p>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+        <a href="https://wa.me/62859106516373" target="_blank" class="whatsapp-float-btn">
+          <button>Hubungi Kami</button>
+        </a>
+      </footer>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
