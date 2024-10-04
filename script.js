@@ -1,6 +1,6 @@
 const loginBtn = document.querySelector('.btnlogin-popup');
 const loginPopup = document.querySelector('.login-popup');
-const closeBtn = document.querySelector('.close-btn');
+const closeBtn = document.querySelector('.icon-close');
 
 loginBtn.addEventListener('click', () => {
   loginPopup.classList.add('show');

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Firm</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-color: #B5F1F5;
+            min-height: 500px;
+        }
+        .building-image {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .service-card {
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .contact-button {
+            background-color: #1E293B;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .container {
+            max-width: 1200px; /* adjust the width to your liking */
+            margin: 0 auto; /* this will center the container */
+            padding: 25px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4">
+        <!-- Hero Section -->
+        <section class="hero-section rounded-3xl p-8 relative mb-16">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <p class="text-gray-600 mb-2">Meet with Best Team</p>
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-4">We Believe In Great Architecture</h1>
+                    <button class="contact-button">Contact Us</button>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <img src="/api/placeholder/500/300" alt="Modern building" class="building-image w-full">
+                    <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg">
+                        <p class="text-xl font-semibold">Architecture with people in mind</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Card -->
+            <div class="absolute top-4 right-4 bg-navy-blue text-white p-4 rounded-lg">
+                <p class="font-bold">10K+</p>
+                <p>Happy clients</p>
+            </div>
+            
+            <!-- Offer Badge -->
+            <div class="absolute bottom-4 right-4 bg-white p-4 rounded-lg">
+                <p class="font-bold">10% OFF</p>
+                <p>100+ Projects</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Best Architecture Team</h2>
+                    <p class="text-gray-600 mb-4">Professional Work</p>
+                    <p class="mb-4">Architecture, the art and technique of designing and building, as distinguished from the skills associated with construction. The practice of architecture is employed.</p>
+                    <button class="bg-black text-white px-6 py-2 rounded">EXPLORE</button>
+                </div>
+                <div>
+                    <div class="service-card">
+                        <h3 class="font-bold mb-2">Industry Design</h3>
+                        <p class="text-gray-600">Complement interested discretion estimating on stimulated apartments.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="font-bold mb-2">Building Design</h3>
+                        <p class="text-gray-600">Over acting nonsens is feel of call. As distinguished went horrible.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="font-bold mb-2">House Design</h3>
+                        <p class="text-gray-600">Never all water me might. On formed merits hunted unable merely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
