@@ -452,10 +452,11 @@ button:hover {
 .edit-button {
   background-color: #4caf50;
   color: #fff;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .reply-button:hover,
