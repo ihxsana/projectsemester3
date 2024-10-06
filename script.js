@@ -9,3 +9,19 @@ loginBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
   loginPopup.classList.remove('show');
 });
+
+/* forum diskusi js */
+// Add event listener to reply button
+document.querySelectorAll('.reply-button').forEach(button => {
+  button.addEventListener('click', () => {
+      // Toggle reply form visibility
+      button.nextElementSibling.classList.toggle('hidden');
+  });
+});
+
+// Add event listener to edit button
+document.querySelectorAll('.edit-button').forEach(button => {
+  button.addEventListener('click', () => {
+  // Toggle edit form visibilitybutton
+  });
+});
