@@ -287,14 +287,21 @@ header {
   width: 100%;
   height: 100%;
   background-image: url("hero-background.jpg");
+  border-radius: 20px; /* adjust the value to your liking */
   background-size: cover;
   background-position: center;
   z-index: -1;
+  overflow: hidden;
 }
 
 .hero {
   max-height: calc(100vh - 100px - 50px);
+  border-radius: 100px;
   overflow: hidden;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
 
 .services {
