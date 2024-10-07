@@ -9,7 +9,7 @@ header {
   width: 85, 6%;
   top: 0;
   left: 0;
-  background-color: #333;
+  background-color: #5e5e5e;
   color: #fff;
   padding: 20px 100px;
   justify-content: space-between;
@@ -46,23 +46,75 @@ header {
   color: #162938;
 }
 
+.navigation .line {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.navigation .line:hover {
+  padding-bottom: 8px;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.line:hover::after {
+  transform: scaleX(1);
+}
+
 .login-popup {
   position: relative;
   width: 350px;
   height: 380px;
-  background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+  background: white;
   display: none; /* Hide it initially */
   position: fixed; /* fix the popup to the viewport */
   top: 50%; /* move the popup 50% from the top */
   left: 50%; /* move the popup 50% from the left */
-  transform: translate(-50%, -50%); /* adjust the position to center */
+  transform: translate(-50%, -50%);
   z-index: 1000;
-  background-color: #fff; /* add a background color */
-  padding: 20px; /* add some padding */
-  border: 1px solid #ddd; /* add a border */
-  border-radius: 5px; /* add a border radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a box shadow */
+  padding: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
   overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.login-popup.active {
+  height: 460px;
+}
+
+.login-popup .login-container {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.login-popup.active .login-container {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.login-popup .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.login-popup.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
 }
 
 .login-popup .icon-close {
@@ -88,11 +140,22 @@ header {
   padding: 20px;
 }
 
+.login-popup .form-box.register {
+  margin-top: -420px;
+  width: 78%;
+  padding: 20px;
+}
+
 .login-popup.show {
-  display: block; /* Show the pop-up when the button is clicked */
+  display: block;
 }
 
 .login-container h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.form-box h2 {
   font-size: 2em;
   text-align: center;
 }
@@ -331,7 +394,7 @@ header {
 }
 
 .call-to-action {
-  background-color: #333;
+  background-color: #5e5e5e;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -363,7 +426,7 @@ header {
 }
 
 footer {
-  background-color: #333;
+  background-color: #5e5e5e;
   color: #fff;
   padding: 10px;
   text-align: center;

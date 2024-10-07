@@ -6,9 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum Diskusi Serba Bisa</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            width: 85, 6%;
+            top: 0;
+            left: 0;
+            background-color: #5e5e5e;
+            color: #fff;
+            padding: 20px 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin-right: 40px;
+        }
+
+        .navigation .btnlogin-popup {
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .navigation .btnlogin-popup:hover {
+            background: #fff;
+            color: #162938;
+        }
+
+        .navigation .line {
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        .navigation .line:hover {
+            padding-bottom: 8px;
+        }
+
+        .line::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .line:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <nav class="navigation">
+            <a href="halamanutama.html" class="line">Beranda</a>
+            <a href="tentang kami.html" class="line">Tentang Kami</a>
+            <a href="forumdiskusi.html" style="border-bottom: 4px solid #fff; padding-bottom: 5px;">Forum Diskusi</a>
+            <button class="btnlogin-popup">Login</button>
+        </nav>
+    </header>
+
     <div class="discussion-container">
         <div class="comment-container">
             <div class="user-profile">
@@ -17,7 +94,7 @@
             </div>
             <div class="comment-box">
                 <p>Ternyata pelayananya keren banget, oiya ges bagaimana cara biar dapetin diskonnya?.</p>
-                <span class="comment-meta">Uploaded on 12/02/2023 10:00 AM | Edited on 12/02/2023 10:05 AM</span>
+                <span class="comment-meta">Uploaded on 12/02/2023 10:00 AM | Edited on 12/02/2023 08.50 AM</span>
                 <button class="reply-button">Reply</button>
                 <button class="edit-button">Edit</button>
                 <form class="reply-form hidden">
@@ -50,7 +127,46 @@
                 </form>
             </div>
         </div>
-        <!-- Add more comment containers here -->
+        <div class="comment-container">
+            <div class="user-profile">
+                <img src="jarif.jpeg" alt="User  Profile Picture">
+                <span class="username">king jarip</span>
+            </div>
+            <div class="comment-box">
+                <p>untuk cek kesehatan apakah dapat gratis obat?.</p>
+                <span class="comment-meta">Uploaded on 12/02/2023 10:00 AM | Edited on 12/02/2023 12.40 AM</span>
+                <button class="reply-button">Reply</button>
+                <button class="edit-button">Edit</button>
+                <form class="reply-form hidden">
+                    <textarea name="reply" id="reply" cols="30" rows="5"></textarea>
+                    <button type="submit">Submit Reply</button>
+                </form>
+                <form class="edit-form hidden">
+                    <textarea name="edit" id="edit" cols="30" rows="5"></textarea>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+        <div class="comment-container">
+            <div class="user-profile">
+                <img src="gerry.jpg" alt="User  Profile Picture">
+                <span class="username">gerryano</span>
+            </div>
+            <div class="comment-box">
+                <p>ada yang pernah pakai layanan grooming? review dong pengalamannya.</p>
+                <span class="comment-meta">Uploaded on 12/02/2023 10:00 AM | Edited on 12/02/2023 07.40 AM</span>
+                <button class="reply-button">Reply</button>
+                <button class="edit-button">Edit</button>
+                <form class="reply-form hidden">
+                    <textarea name="reply" id="reply" cols="30" rows="5"></textarea>
+                    <button type="submit">Submit Reply</button>
+                </form>
+                <form class="edit-form hidden">
+                    <textarea name="edit" id="edit" cols="30" rows="5"></textarea>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
