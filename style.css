@@ -375,7 +375,7 @@ header {
 }
 
 .testimonials {
-  padding: 50px 20px;
+  padding: 5px 20px;
   background-color: #f9f9f9;
 }
 .testimonials h2 {
@@ -384,7 +384,7 @@ header {
   font-size: 24px;
 }
 .testimonial {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .testimonial img {
   width: 50px;
@@ -435,7 +435,7 @@ header {
 footer {
   background-color: #5e5e5e;
   color: #fff;
-  padding: 10px;
+  padding: 1px;
   text-align: center;
 }
 
