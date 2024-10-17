@@ -1,37 +1,23 @@
-<?php
-session_start();
-if(isset($_SESSION['user'])){
-    $user = $_SESSION['user'];
-
-}else{
-    header("Location: index.php");
-    exit();
-}
-
-?>
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
-<head>
+<head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Service</title>
+  <title>Register & Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="stylehalaman.css">
 </head>
 
 <body>
-  <header>
+
+<header>
     <nav class="navigation">
       <a href="#" style="border-bottom: 4px solid #fff; padding-bottom: 4px;">Beranda</a>
       <a href="tentang kami.php" class="line">Tentang Kami</a>
       <a href="forumdiskusi.php" class="line">Forum Diskusi</a>
       <a href="halamanpemesanan.php" class="line">Pesanan</a>
-      <button class= "btnlogin-popup" id="login-btn"><?php echo $user['name']; ?></button>
-      <div class="dropdown" id="logout-dropdown">
-        <button class="profil-btn">Profil</button>
-        <button class="logout-btn">Logout</button>
-      </div>
+      <button class="btnlogin-popup">Login</button>
     </nav>
   </header>
 
@@ -97,19 +83,15 @@ if(isset($_SESSION['user'])){
         <p>"Saya sangat puas dengan layanan Home Service. Mereka sangat cepat dan efisien." - Fafa Sigma</p>
       </div>
     </section>
-    <section class="call-to-action">
-      <h2>Daftar Sekarang dan Dapatkan Layanan Terbaik</h2>
-    </section>
   </main>
   <footer>
+    <h2>Daftar Sekarang dan Dapatkan Layanan Terbaik</h2>
     <p>&copy; 2023 Serba Bisa.Project Pemrograman Website.</p>
     <a href="https://wa.me/62859106516373" target="_blank" class="whatsapp-float-btn">
       <button>Hubungi Kami</button>
     </a>
   </footer>
-  <script src="script2.js"></script>
+  <script src="belumlogin.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
-</html>

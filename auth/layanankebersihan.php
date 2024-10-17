@@ -42,7 +42,7 @@
 
 <body>
     <div class="absolute top-0 left-0 p-4">
-        <a href="halamanutama.html" class="contact-button">
+        <a href="home.php" class="contact-button">
             < Kembali</a>
     </div>
     <div class="container mx-auto px-4">
@@ -73,8 +73,7 @@
                         menciptakan lingkungan bersih, sehat, dan nyaman bagi klien kami. Dengan pengalaman lebih dari
                         10 tahun di industri ini, kami menawarkan layanan pembersihan berkualitas tinggi untuk rumah,
                         kantor, dan berbagai jenis properti lainnya.</p>
-                    <a href="https://forms.gle/r6hUppxqxsgWqM9y8">
-                        <button class="bg-black text-white px-6 py-2 rounded">Pesan Sekarang</button>
+                    <button id="openPopup" class="bg-black text-white px-6 py-2 rounded">Pilih Paket</button>
                 </div>
                 <div>
                     <div class="service-card">
@@ -99,16 +98,59 @@
             </div>
         </section>
     </div>
+    <div id="packageModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+        style="display: none;">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <h3 class="text-lg font-bold mb-4">Pilih Paket Layanan</h3>
+            <div id="packageOptions">
+            </div>
+            <div class="text-right mt-4">
+                <button onclick="closeModal()" class="px-4 py-2 bg-gray-300 text-black rounded">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-4">Pilihan Paket</h3>
+            <div class="space-y-4">
+                <button onclick="addToOrder('Paket Dasar', 25000)" class="w-full bg-gray-200 p-4 rounded text-left">
+                    <span class="font-bold">Paket Dasar 🫧</span>
+                    <span class="float-right">Rp 25.000</span>
+                </button>
+                <button onclick="addToOrder('Paket Standar', 50000)" class="w-full bg-gray-200 p-4 rounded text-left">
+                    <span class="font-bold">Paket Standar 🧼</span>
+                    <span class="float-right">Rp 50.000</span>
+                </button>
+                <button onclick="addToOrder('Paket Premium', 80000)" class="w-full bg-gray-200 p-4 rounded text-left">
+                    <span class="font-bold">Paket Premium 🧽</span>
+                    <span class="float-right">Rp 80.000</span>
+                </button>
+            </div>
+            <button id="closePopup" class="mt-4 bg-black text-white px-6 py-2 rounded">Tutup</button>
+        </div>
+    </div>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        const openPopup = document.getElementById('openPopup');
+        const closePopup = document.getElementById('closePopup');
+        const popupOverlay = document.getElementById('popupOverlay');
+
+        openPopup.addEventListener('click', () => {
+            popupOverlay.classList.remove('hidden');
         });
+
+        closePopup.addEventListener('click', () => {
+            popupOverlay.classList.add('hidden');
+        });
+
+        function addToOrder(itemName, price) {
+            let order = JSON.parse(localStorage.getItem('order')) || [];
+            order.push({name: itemName, price: price});
+            localStorage.setItem('order', JSON.stringify(order));
+            alert(itemName + ' telah ditambahkan ke pesanan Anda.');
+            popupOverlay.classList.add('hidden');
+        }
     </script>
 </body>
 

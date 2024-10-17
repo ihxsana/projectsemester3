@@ -6,19 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tentang Kami</title>
+    <link rel="stylesheet" href="stylehalaman.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         header {
-            width: 85, 6%;
+            width: 100%;
             top: 0;
             left: 0;
-            background-color: #5e5e5e;
+            background-color: #333;
             color: #fff;
             padding: 20px 100px;
             justify-content: space-between;
@@ -80,7 +74,7 @@
         .line:hover::after {
             transform: scaleX(1);
         }
-
+        
         section {
             max-width: 1200px;
             margin: 40px auto;
@@ -180,9 +174,10 @@
 <body>
     <header>
         <nav class="navigation">
-            <a href="halamanutama.html" class="line">Beranda</a>
-            <a href="tentang kami.html" style="border-bottom: 4px solid #fff; padding-bottom: 5px;">Tentang Kami</a>
-            <a href="forumdiskusi.html" class="line">Forum Diskusi</a>
+            <a href="home.php" class="line">Beranda</a>
+            <a href="tentang kami.php" style="border-bottom: 4px solid #fff; padding-bottom: 5px;">Tentang Kami</a>
+            <a href="forumdiskusi.php" class="line">Forum Diskusi</a>
+            <a href="halamanpemesanan.php" class="line">Pesanan</a>
             <button class="btnlogin-popup">Login</button>
         </nav>
     </header>
@@ -225,7 +220,7 @@
             Baik untuk kebutuhan membersihkan rumah, merawat hewan peliharaan, atau mendapatkan layanan kesehatan
             langsung di rumah, kami siap membantu Anda dengan layanan yang dapat diandalkan.</p>
 
-        <a href="#" class="cta-button">Hubungi Kami</a>
+        <a href="https://wa.me/62859106516373" class="cta-button">Tanyakan Selengkapnya!</a>
     </section>
     <script src="script.js"></script>
 </body>

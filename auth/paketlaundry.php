@@ -42,7 +42,7 @@
 
 <body>
     <div class="absolute top-0 left-0 p-4">
-        <a href="halamanutama.html" class="contact-button">
+        <a href="home.php" class="contact-button">
             < Kembali</a>
     </div>
     <div class="container mx-auto px-4">
@@ -72,7 +72,7 @@
                     <p class="text-gray-600 mb-4">Tim profesional</p>
                     <p class="mb-4">Kami memahami betapa berharganya waktu Anda. Percayakan urusan cucian kepada tim
                         profesional kami dan nikmati pakaian bersih, wangi, dan rapi tanpa perlu repot.</p>
-                    <button class="bg-black text-white px-6 py-2 rounded">Pesan Sekarang</button>
+                    <button id="openPopup" class="bg-black text-white px-6 py-2 rounded">Pilih Paket</button>
                 </div>
                 <div>
                     <div class="service-card">
@@ -100,18 +100,52 @@
                 </div>
             </div>
         </section>
+
+        <div id="popupOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4">Pilihan Paket</h3>
+                <div class="space-y-4">
+                    <button onclick="addToOrder('Cuci Reguler', 15000)"
+                        class="w-full bg-gray-200 p-4 rounded text-left">
+                        <span class="font-bold">Cuci Reguler 🧺</span>
+                        <span class="float-right">Rp 15.000</span>
+                    </button>
+                    <button onclick="addToOrder('Cuci Kilat', 25000)" class="w-full bg-gray-200 p-4 rounded text-left">
+                        <span class="font-bold">Cuci Kilat ⚡</span>
+                        <span class="float-right">Rp 25.000</span>
+                    </button>
+                    <button onclick="addToOrder('Cuci Khusus', 35000)" class="w-full bg-gray-200 p-4 rounded text-left">
+                        <span class="font-bold">Cuci Khusus 👔</span>
+                        <span class="float-right">Rp 35.000</span>
+                    </button>
+                </div>
+                <button id="closePopup" class="mt-4 bg-black text-white px-6 py-2 rounded">Tutup</button>
+            </div>
+        </div>
+
+        <script>
+            const openPopup = document.getElementById('openPopup');
+            const closePopup = document.getElementById('closePopup');
+            const popupOverlay = document.getElementById('popupOverlay');
+
+            openPopup.addEventListener('click', () => {
+                popupOverlay.classList.remove('hidden');
+            });
+
+            closePopup.addEventListener('click', () => {
+                popupOverlay.classList.add('hidden');
+            });
+
+            function addToOrder(itemName, price) {
+                let order = JSON.parse(localStorage.getItem('order')) || [];
+                order.push({ name: itemName, price: price });
+                localStorage.setItem('order', JSON.stringify(order));
+                alert(itemName + ' telah ditambahkan ke pesanan Anda.');
+                popupOverlay.classList.add('hidden');
+            }
+        </script>
     </div>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
