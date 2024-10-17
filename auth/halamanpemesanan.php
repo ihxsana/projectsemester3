@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    $user = $_SESSION['user'];
+
+}else{
+    header("Location: index.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -333,7 +345,6 @@
             background-color: #45a049;
         }
     </style>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -343,7 +354,11 @@
             <a href="tentang kami.php" class="line">Tentang Kami</a>
             <a href="forumdiskusi.php" class="line">Forum Diskusi</a>
             <a href="halamanpemesanan.php" style="border-bottom: 4px solid #fff; padding-bottom: 4px;">Pesanan</a>
-            <button class="btnlogin-popup" id="login-btn">Login</button>
+            <button class= "btnlogin-popup" id="login-btn"><?php echo $user['name']; ?></button>
+            <div class="dropdown" id="logout-dropdown">
+                <button class="profil-btn">Profil</button>
+                <button class="logout-btn">Logout</button>
+            </div>
         </nav>
     </header>
     <div class="container">
@@ -406,6 +421,29 @@
             </div>
         </div>
         <script>
+
+const loginBtn = document.querySelector('.btnlogin-popup');
+const loginPopup = document.querySelector('.login-popup');
+const logoutDropdown = document.getElementById('logout-dropdown');
+const logoutBtn = document.querySelector('.logout-btn');
+const profilBtn = document.querySelector('.profil-btn');
+
+document.querySelector('.btnlogin-popup').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+profilBtn.addEventListener('click', () => {
+  window.location.href = "halamanprofile.php";
+});
+
+loginBtn.addEventListener('click', () => {
+  logoutDropdown.classList.toggle('show');
+});
+
+logoutBtn.addEventListener('click', () => {
+  window.location.href = "logout.php";
+});
+
             function displayOrder() {
                 let order = JSON.parse(localStorage.getItem('order')) || [];
                 let orderSummary = document.getElementById('order-summary');

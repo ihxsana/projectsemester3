@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    $user = $_SESSION['user'];
+
+}else{
+    header("Location: index.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,72 +20,6 @@
     <title>Tentang Kami</title>
     <link rel="stylesheet" href="stylehalaman.css">
     <style>
-        header {
-            width: 100%;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            color: #fff;
-            padding: 20px 100px;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navigation {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            margin-right: 40px;
-        }
-
-        .navigation .btnlogin-popup {
-            width: 130px;
-            height: 50px;
-            background: transparent;
-            border: 2px solid #fff;
-            outline: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.1em;
-            color: #fff;
-            font-weight: 500;
-        }
-
-        .navigation .btnlogin-popup:hover {
-            background: #fff;
-            color: #162938;
-        }
-
-        .navigation .line {
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-        }
-
-        .navigation .line:hover {
-            padding-bottom: 8px;
-        }
-
-        .line::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #fff;
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .line:hover::after {
-            transform: scaleX(1);
-        }
         
         section {
             max-width: 1200px;
@@ -178,7 +124,11 @@
             <a href="tentang kami.php" style="border-bottom: 4px solid #fff; padding-bottom: 5px;">Tentang Kami</a>
             <a href="forumdiskusi.php" class="line">Forum Diskusi</a>
             <a href="halamanpemesanan.php" class="line">Pesanan</a>
-            <button class="btnlogin-popup">Login</button>
+            <button class= "btnlogin-popup" id="login-btn"><?php echo $user['name']; ?></button>
+            <div class="dropdown" id="logout-dropdown">
+                <button class="profil-btn">Profil</button>
+                <button class="logout-btn">Logout</button>
+            </div>
         </nav>
     </header>
     <section>
@@ -222,5 +172,5 @@
 
         <a href="https://wa.me/62859106516373" class="cta-button">Tanyakan Selengkapnya!</a>
     </section>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>

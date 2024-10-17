@@ -10,14 +10,13 @@
 </head>
 
 <body>
-
 <header>
     <nav class="navigation">
       <a href="#" style="border-bottom: 4px solid #fff; padding-bottom: 4px;">Beranda</a>
       <a href="tentang kami.php" class="line">Tentang Kami</a>
       <a href="forumdiskusi.php" class="line">Forum Diskusi</a>
       <a href="halamanpemesanan.php" class="line">Pesanan</a>
-      <button class="btnlogin-popup">Login</button>
+      <button onclick="window.location.href='index.php'" class="btnlogin-popup">Login</button>
     </nav>
   </header>
 
@@ -91,7 +90,6 @@
       <button>Hubungi Kami</button>
     </a>
   </footer>
-  <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

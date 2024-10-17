@@ -77,6 +77,7 @@ header {
   color: #fff;
   font-weight: 500;
   text-align: center;
+  z-index: 1000;
 }
 
 .profil-btn {
@@ -141,6 +142,22 @@ header {
   align-items: center;
   color: black;
   text-align: center;
+  position: relative;
+  padding: 100px 0;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("hero-background.jpg");
+  border-radius: 20px; /* adjust the value to your liking */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -159,11 +176,12 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 90px;
 }
 
 .service-title {
   margin-bottom: 16px; /* add some space between the title and cards */
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .card-container {
@@ -232,15 +250,15 @@ header {
   text-align: center; /* add this to center the text */
   margin: 0 auto; /* add this to center the container horizontally */
   max-width: 88em;
-  margin-top: 3em;
-  margin-bottom: 4em;
+  margin-top: 5em;
+  margin-bottom: 6em;
 }
 
 .testimonials h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   margin-top: 18px;
-  font-size: 24px;
+  font-size: 30px;
 }
 .testimonial {
   margin-bottom: 15px;
@@ -319,559 +337,6 @@ button:hover {
   padding: 0;
   font-size: 16px;
   cursor: pointer;
-}
-
-/*style forum diskusi*/
-.discussion-container {
-  width: 80%;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.comment-container {
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.user-profile img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.username {
-  font-weight: bold;
-  color: #333;
-}
-
-.comment-box {
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.comment-meta {
-  font-size: 12px;
-  color: #666;
-  margin-top: 10px;
-}
-
-.reply-button,
-.edit-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-.reply-button:hover,
-.edit-button:hover {
-  background-color: #3e8e41;
-}
-
-.reply-form,
-.edit-form {
-  margin-top: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Reply textarea */
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-}
-
-/* test style */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  width: 85, 6%;
-  top: 0;
-  left: 0;
-  background-color: #5e5e5e;
-  color: #fff;
-  padding: 20px 100px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.navigation a {
-  color: white;
-  text-decoration: none;
-  margin-right: 40px;
-}
-
-.navigation .btnlogin-popup {
-  width: 130px;
-  height: 50px;
-  background: transparent;
-  border: 2px solid #fff;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1em;
-  color: #fff;
-  font-weight: 500;
-}
-
-.navigation .btnlogin-popup:hover {
-  background: #fff;
-  color: #162938;
-}
-
-.navigation .line {
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-}
-
-.navigation .line:hover {
-  padding-bottom: 8px;
-}
-
-.line::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #fff;
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-
-.line:hover::after {
-  transform: scaleX(1);
-}
-
-.login-popup {
-  position: relative;
-  width: 350px;
-  height: 380px;
-  background: white;
-  display: none; /* Hide it initially */
-  position: fixed; /* fix the popup to the viewport */
-  top: 50%; /* move the popup 50% from the top */
-  left: 50%; /* move the popup 50% from the left */
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  padding: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
-  overflow: hidden;
-  transition: height 0.2s ease;
-}
-
-.login-popup.active {
-  height: 460px;
-}
-
-.login-popup .login-container {
-  transition: transform 0.18s ease;
-  transform: translateX(0);
-}
-
-.login-popup.active .login-container {
-  transition: none;
-  transform: translateX(-400px);
-}
-
-.login-popup .form-box.register {
-  position: absolute;
-  transition: none;
-  transform: translateX(400px);
-}
-
-.login-popup.active .form-box.register {
-  transition: transform 0.18s ease;
-  transform: translateX(0);
-}
-
-.login-popup .icon-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45px;
-  height: 45px;
-  background: #000;
-  font-size: 2em;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom-left-radius: 20px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.login-popup .login-container {
-  margin-top: -20px;
-  width: 65, 8%;
-  padding: 20px;
-}
-
-.login-popup .form-box.register {
-  margin-top: -420px;
-  width: 78%;
-  padding: 20px;
-}
-
-.login-popup.show {
-  display: block;
-}
-
-.login-container h2 {
-  font-size: 2em;
-  text-align: center;
-}
-
-.form-box h2 {
-  font-size: 2em;
-  text-align: center;
-}
-
-.input-box {
-  position: relative;
-  width: 65, 8%;
-  height: 50px;
-  border-bottom: 2px solid #000000;
-  margin: 30px 0;
-}
-
-.input-box label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 1em;
-  color: #000000;
-  font-weight: 500;
-  pointer-events: none;
-}
-
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-  top: -5px;
-}
-
-.input-box input {
-  width: 90%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  color: #000000;
-  font-weight: 600;
-  padding: 0 35px 0 5px;
-}
-
-.input-box .icon {
-  position: absolute;
-  right: 8px;
-  font: 1.2em;
-  color: #000000;
-  line-height: 57px;
-}
-
-.remember-forgot {
-  font-size: 0.9em;
-  color: #000000;
-  font-weight: 500;
-  margin: -15px 0 15px;
-  display: flex;
-  justify-content: space-between;
-}
-.remember-forgot label input {
-  accent-color: #000;
-  margin-right: 3px;
-}
-
-.remember-forgot a {
-  color: #000;
-  text-decoration: none;
-}
-
-.remember-forgot a:hover {
-  text-decoration: underline;
-}
-
-.btn {
-  width: 100%;
-  height: 45px;
-  background: #000000;
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  color: white;
-  font-weight: 500;
-}
-
-.login-register {
-  font-size: 0.9em;
-  color: #000;
-  text-align: center;
-  font-weight: 500;
-  margin: 25px 0 10px;
-}
-
-.login-register p a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.login-register p a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  position: relative;
-  padding: 100px 0;
-  display: flex; /* Add this to center the content vertically and horizontally */
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-content {
-  text-align: center; /* Add this to center the text horizontally */
-}
-
-.hero-content h1 {
-  color: #000000;
-  position: relative;
-  top: 23px;
-}
-
-.hero-content p {
-  color: #000000;
-  bottom: 10px;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("hero-background.jpg");
-  border-radius: 20px; /* adjust the value to your liking */
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.hero {
-  max-height: calc(100vh - 100px - 50px);
-  border-radius: 100px;
-  overflow: hidden;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-}
-
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.service-title {
-  margin-bottom: 20px; /* add some space between the title and cards */
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  margin: 20px; /* add some space between cards */
-}
-
-.services .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px;
-  width: 250px;
-}
-
-.card img {
-  width: 100%;
-  height: 150px; /* Atur tinggi gambar sesuai kebutuhan */
-  object-fit: cover; /* Membuat gambar menutupi seluruh area */
-  border-radius: 10px; /* Menambahkan sudut bulat pada gambar */
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ccc;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #ccc;
-}
-
-.testimonials {
-  padding: 5px 20px;
-  background-color: #f9f9f9;
-}
-.testimonials h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-.testimonial {
-  margin-bottom: 10px;
-}
-.testimonial img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-.testimonial p {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 16px;
-  margin: 0;
-}
-
-.call-to-action {
-  background-color: #5e5e5e;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.whatsapp-float-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  border-radius: 50%;
-  background-color: #25d366; /* WhatsApp green color */
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-}
-
-.whatsapp-float-btn:hover {
-  background-color: #1e8233; /* WhatsApp green hover color */
-}
-
-.whatsapp-float-btn button {
-  border: none;
-  background: none;
-  padding: 0;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-footer {
-  background-color: #5e5e5e;
-  color: #fff;
-  padding: 1px;
-  text-align: center;
-}
-
-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer li {
-  margin-right: 20px;
-}
-
-.fa {
-  font-size: 24px;
-  color: #fff;
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
 }
 
 /*style forum diskusi*/

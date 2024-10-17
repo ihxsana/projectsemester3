@@ -97,11 +97,9 @@ if(isset($_SESSION['user'])){
         <p>"Saya sangat puas dengan layanan Home Service. Mereka sangat cepat dan efisien." - Fafa Sigma</p>
       </div>
     </section>
-    <section class="call-to-action">
-      <h2>Daftar Sekarang dan Dapatkan Layanan Terbaik</h2>
-    </section>
   </main>
   <footer>
+    <h2>Daftar Sekarang dan Dapatkan Layanan Terbaik</h2>
     <p>&copy; 2023 Serba Bisa.Project Pemrograman Website.</p>
     <a href="https://wa.me/62859106516373" target="_blank" class="whatsapp-float-btn">
       <button>Hubungi Kami</button>
