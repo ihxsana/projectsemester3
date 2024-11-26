@@ -325,7 +325,7 @@
 
 <body>
     <div class="absolute top-0 left-0 p-4">
-        <a href="dashboardbeta.html" class="contact-button">Kembali</a>
+        <a href="dashboardbeta.php" class="contact-button">Kembali</a>
     </div>
     <div class="container-xl">
         <div class="table-responsive">

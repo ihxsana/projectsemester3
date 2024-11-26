@@ -17,7 +17,7 @@ session_start();
     <style>
         body {
             font-family: 'Nunito', sans-serif;
-            background-color: #fff7f0;
+            background-color: #8294C4;
             margin: 0;
             padding: 0;
         }
@@ -28,7 +28,7 @@ session_start();
 
         .sidebar {
             width: 250px;
-            background-color: #fff3e6;
+            background-color: #ACB1D6;
             padding: 20px;
             height: 100vh;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -50,13 +50,13 @@ session_start();
 
         .sidebar a:hover,
         .sidebar a.active {
-            background-color: #ff7f50;
+            background-color: #8294C4;
             color: #fff;
         }
 
         .sidebar .logout {
             margin-top: 20px;
-            color: #ff7f50;
+            color: #D91656;
         }
 
         .main-content {
@@ -89,7 +89,7 @@ session_start();
         }
 
         .card {
-            background-color: #fff;
+            background-color: #DBDFEA;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -132,7 +132,7 @@ session_start();
         .table td {
             padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #f9f9f9;
         }
 
         .table th {
@@ -198,14 +198,14 @@ session_start();
     <div class="container">
         <div class="sidebar">
             <img alt="Logo" height="50"
-                src="https://storage.googleapis.com/a1aa/image/Sx87aQIFRObIIxaVvLp4LTYucQuS6fsHJ7mHeBaueWbnXconA.jpg"
+                src="logobeta.jpg"
                 width="50" />
             <a class="active" href="#">
                 <i class="fas fa-home">
                 </i>
                 Home
             </a>
-            <a href="services-crud.html">
+            <a href="services-crud.php">
                 <i class="fas fa-shopping-cart">
                 </i>
                 Ecommerce
