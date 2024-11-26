@@ -69,6 +69,9 @@ if (isset($_SESSION['errors'])) {
       <p>Don't have account yet?</p>
       <a href="register.php">Sign Up</a>
     </div>
+    <div class="links">
+      <a href="loginadmin.php">Login as Admin</a>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
